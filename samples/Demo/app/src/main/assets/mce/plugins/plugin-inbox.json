@@ -1,0 +1,13 @@
+{
+  "notification-actions": [
+    {
+      "type": "openInboxMessage",
+      "class": "co.acoustic.mobile.push.sdk.plugin.inbox.InboxMessageAction",
+      "initOptions": {
+        "templates": {
+          "html": "co.acoustic.mobile.push.sdk.plugin.inbox.HtmlRichContent"
+        }
+      }
+    }
+  ]
+}
