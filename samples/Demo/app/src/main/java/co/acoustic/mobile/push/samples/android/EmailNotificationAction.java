@@ -55,7 +55,10 @@ public class EmailNotificationAction implements MceNotificationAction {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
                 try {
-
+                    if(fromNotification) {
+                        Intent it = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+                        context.sendBroadcast(it);
+                    }
                     context.startActivity(intent);
                 } catch (android.content.ActivityNotFoundException e) {
                     Logger.e(TAG, "No Email activity found:" + e.getMessage(), e);

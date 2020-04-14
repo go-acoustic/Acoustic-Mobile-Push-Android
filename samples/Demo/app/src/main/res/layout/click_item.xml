@@ -6,7 +6,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemView"
-        android:textColor="@color/material_blue_grey_900"
         android:textSize="@dimen/key_text_size"
         android:paddingLeft="@dimen/key_horizontal_padding"
         android:paddingRight="@dimen/key_horizontal_padding"

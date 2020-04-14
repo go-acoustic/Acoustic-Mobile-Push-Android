@@ -20,6 +20,7 @@ import android.os.Bundle;
 import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
+
 import co.acoustic.mobile.push.sdk.api.MceBroadcastReceiver;
 import co.acoustic.mobile.push.sdk.api.MceSdk;
 import co.acoustic.mobile.push.sdk.api.attribute.Attribute;
@@ -41,7 +42,7 @@ public class SampleNotifier extends MceBroadcastReceiver {
 
     public static String ACTION_KEY = "action";
     public static String ACTION_SDK_REGISTRATION = "sdkreg";
-    public static String ACTION_GCM_REGISTRATION = "gcmreg";
+    public static String ACTION_MSG_SVC_REGISTRATION = "msgsvcreg";
 
     @Override
     public void onSdkRegistered(Context context) {
@@ -50,6 +51,9 @@ public class SampleNotifier extends MceBroadcastReceiver {
         Log.i(TAG, "-- SDK registered");
         Log.i(TAG, "Channel ID is: " + registrationDetails.getChannelId());
         Log.i(TAG, "User ID is: " + registrationDetails.getUserId());
+
+
+
 
         showNotification(context,  resourcesHelper.getString("sdk_reg_subject"),  resourcesHelper.getString("sdk_reg_msg_prefix")+": "+registrationDetails.getChannelId(), ACTION_SDK_REGISTRATION);
 
@@ -67,7 +71,7 @@ public class SampleNotifier extends MceBroadcastReceiver {
         Log.i(TAG, "-- SDK messaging service registered");
         Log.i(TAG, "Registration ID  is: " + registrationDetails.getPushToken());
         if(registrationDetails.getPushToken() != null) {
-            showNotification(context, resourcesHelper.getString("gcm_reg_subject"), registrationDetails.getPushToken(), ACTION_GCM_REGISTRATION);
+            showNotification(context, resourcesHelper.getString("msg_svc_reg_subject"), registrationDetails.getPushToken(), ACTION_MSG_SVC_REGISTRATION);
         }
     }
 

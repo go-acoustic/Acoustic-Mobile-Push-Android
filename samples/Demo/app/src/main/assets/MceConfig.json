@@ -1,14 +1,14 @@
 {
-  "Please note: if you are in Europe, you may need to change the value in 'baseUrl' below to": "https://sdk6.ibm.xtify.com",
-  "baseUrl": "https://sdk8.ibm.xtify.com",
+  "Please note: if you are in Europe, you may need to change the value in 'baseUrl' below to": "https://mobile-sdk-lib-eu-1.brilliantcollector.com",
+  "baseUrl": "https://mobile-sdk-lib-ca-1.brilliantcollector.com",
 
   "appKey": {
     "prod":"YOUR APP KEY"
   },
   "Set this to the google project number if you are using GCM or to an empty string if you are using FCM": "",
-  "senderId": "YOUR GCM PROJECT ID",
+  "senderId": "",
 
-  "Use 'gcm' for GCM , 'fcm' for FCM or 'custom' for custom messaging service": "",
+  "Use 'fcm' for FCM or 'custom' for custom messaging service": "",
   "messagingService": "fcm",
 
   "Will invalidate the existing user/channel ID if they exist when set to true": "This is for testing only. Do not ship with this set to true unless you understand what you are doing",

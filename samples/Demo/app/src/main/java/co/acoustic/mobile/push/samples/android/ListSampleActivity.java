@@ -70,7 +70,7 @@ public abstract class ListSampleActivity extends SampleActivity implements Adapt
                 if (action != null) {
                     if (SampleNotifier.ACTION_SDK_REGISTRATION.equals(action)) {
                         handleSdkRegistration();
-                    } else if (SampleNotifier.ACTION_GCM_REGISTRATION.equals(action)) {
+                    } else if (SampleNotifier.ACTION_MSG_SVC_REGISTRATION.equals(action)) {
                         handleGcmRegistration();
                     }
                 }

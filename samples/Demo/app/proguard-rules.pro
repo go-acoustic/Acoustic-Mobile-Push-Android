@@ -47,12 +47,11 @@
 -keep public class * extends android.app.Service {public *; protected *;}
 -keep public class co.acoustic.mobile.push.sdk.api.** {public *; protected *;}
 -keep public class co.acoustic.mobile.push.sdk.events.** {public *; protected *;}
+-keep public class co.acoustic.mobile.push.sdk.attributes.** {public *; protected *;}
 -keep public class co.acoustic.mobile.push.sdk.notification.NotificationsUtility {public *; protected *;}
 -keep public class co.acoustic.mobile.push.sdk.notification.NotificationsUtility$* {public *; protected *;}
 -keep public class co.acoustic.mobile.push.sdk.Preferences {public *; protected *;}
--keep public class com.amazon.device.messaging.ADM {public *; protected *;}
 
--keep public class co.acoustic.mobile.push.sdk.messaging.gcm.Gcm {public *; protected *;}
 -keep public class com.google.android.gms.common.GooglePlayServicesUtil {public *; protected *;}
 
 -keep public class * extends android.content.ContentProvider
@@ -66,7 +65,6 @@
 -keep public class com.google.android.gms.** { *; }
 -dontwarn com.google.android.gms.**
 -dontwarn javax.**
--keepnames public class * extends io.realm.RealmObject
 -keep class io.realm.** { *; }
 -dontwarn io.realm.**
 -keeppackagenames com.android.providers.contacts.**

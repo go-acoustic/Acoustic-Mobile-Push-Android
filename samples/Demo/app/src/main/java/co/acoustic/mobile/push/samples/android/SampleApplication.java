@@ -18,6 +18,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 
+
 import co.acoustic.mobile.push.samples.android.layout.ResourcesHelper;
 import co.acoustic.mobile.push.sdk.api.MceApplication;
 import co.acoustic.mobile.push.sdk.api.MceSdk;
@@ -92,4 +93,6 @@ public class SampleApplication extends MceApplication {
             notificationManager.createNotificationChannel(channel);
         }
     }
+
+
 }

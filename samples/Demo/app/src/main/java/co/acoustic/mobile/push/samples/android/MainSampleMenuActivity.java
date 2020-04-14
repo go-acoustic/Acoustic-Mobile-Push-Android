@@ -122,7 +122,7 @@ public class MainSampleMenuActivity extends ListSampleActivity {
 
             RegistrationDetails registrationDetails = MceSdk.getRegistrationClient().getRegistrationDetails(getApplicationContext());
             if (registrationDetails.getChannelId() == null || registrationDetails.getChannelId().length() == 0) {
-                Toast.makeText(MainSampleMenuActivity.this, resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), getEventsActivityClass());
@@ -131,7 +131,7 @@ public class MainSampleMenuActivity extends ListSampleActivity {
         } else if (position == SEND_USER_ATTRIBUTES_INDEX) {
             RegistrationDetails registrationDetails = MceSdk.getRegistrationClient().getRegistrationDetails(getApplicationContext());
             if (registrationDetails.getChannelId() == null || registrationDetails.getChannelId().length() == 0) {
-                Toast.makeText(MainSampleMenuActivity.this, resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), getAttributesActivityClass());
@@ -156,7 +156,7 @@ public class MainSampleMenuActivity extends ListSampleActivity {
         } else if (position == LOCATIONS_INDEX) {
             RegistrationDetails registrationDetails = MceSdk.getRegistrationClient().getRegistrationDetails(getApplicationContext());
             if (registrationDetails.getChannelId() == null || registrationDetails.getChannelId().length() == 0) {
-                Toast.makeText(MainSampleMenuActivity.this, resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), resourcesHelper.getString("no_sdk_reg_toast"), Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), LocationActivity.class);

@@ -75,7 +75,7 @@ public class EventSampleActivity extends ListSampleActivity {
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         List<Attribute> attributes = new LinkedList<Attribute>();
         attributes.add(new StringAttribute("payload", "{\"sampleData\": \"A sample value\"}"));
-        Event event = new Event(Constants.Notifications.SIMPLE_NOTIFICATION_EVENT_TYPE, "appOpened", new Date(), attributes, "sampleAttribution", "sampleMailingId");
+        Event event = new Event("custom", "appOpened", new Date(), attributes, "sampleAttribution", "sampleMailingId");
         OperationCallback<Event> callback = new OperationCallback<Event>() {
             @Override
             public void onSuccess(Event event, OperationResult result) {
@@ -83,7 +83,7 @@ public class EventSampleActivity extends ListSampleActivity {
                 EventSampleActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(EventSampleActivity.this, resourcesHelper.getString("event_send_succeeded"), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EventSampleActivity.this.getApplicationContext(), resourcesHelper.getString("event_send_succeeded"), Toast.LENGTH_SHORT).show();
                     }
                 });
             }
@@ -94,7 +94,7 @@ public class EventSampleActivity extends ListSampleActivity {
                 EventSampleActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(EventSampleActivity.this, resourcesHelper.getString("event_send_failed"), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EventSampleActivity.this.getApplicationContext(), resourcesHelper.getString("event_send_failed"), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -12,7 +12,7 @@
     <string name="sdk_reg_update_subject">SDK Registration Updated</string>
     <string name="sdk_rereg_subject">SDK Re-Registration</string>
     <string name="sdk_reg_msg_prefix">Channel ID</string>
-    <string name="gcm_reg_subject">GCM/FCM Registration</string>
+    <string name="msg_svc_reg_subject">Messaging Service Registration</string>
 
     <string name="registration_details_title">Registration Details</string>
     <string name="send_test_events_title">Send Test Events</string>
@@ -31,7 +31,7 @@
     <string name="credentials_details">User ID and Channel ID only known after registration. The registration process could take several minutes, If you have issues with registering a device make sure you have the correct certificate and appKey.</string>
 
     <string name="no_sdk_reg_toast">SDK is not registered yet</string>
-    <string name="no_gcm_toast">GCM/FCM is not registered yet</string>
+    <string name="no_msg_svc_toast">Messaging service is not registered yet</string>
 
     <string name="attributes_name">User Attributes</string>
     <string name="attributes_view_title">Send User Attributes</string>

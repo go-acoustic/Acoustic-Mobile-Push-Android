@@ -34,7 +34,7 @@ public class RegistrationDetailsSampleActivity extends ListSampleActivity {
 
     @Override
     protected List<String> getListItems() {
-        LinkedList<String> items = new LinkedList<String>();
+        LinkedList<String> items = new LinkedList<>();
         items.add(resourcesHelper.getString("user_id_title"));
         items.add(resourcesHelper.getString("channel_id_title"));
         items.add(resourcesHelper.getString("appkey_title"));
@@ -45,7 +45,7 @@ public class RegistrationDetailsSampleActivity extends ListSampleActivity {
     protected Object[] createUIValues(String[] itemsArray) {
         String notRegistered = resourcesHelper.getString("not_registered");
 
-        KeyValueLayout.KeyValue<String>[] uiValues = new KeyValueLayout.KeyValue[itemsArray.length];
+        KeyValueLayout.KeyValue[] uiValues = new KeyValueLayout.KeyValue[itemsArray.length];
         RegistrationDetails registrationDetails = MceSdk.getRegistrationClient().getRegistrationDetails(getApplicationContext());
 
         String userId = registrationDetails.getUserId() != null ? registrationDetails.getUserId() : notRegistered;
