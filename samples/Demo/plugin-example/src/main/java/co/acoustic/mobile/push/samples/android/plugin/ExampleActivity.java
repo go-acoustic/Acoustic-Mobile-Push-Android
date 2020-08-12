@@ -42,7 +42,7 @@ public class ExampleActivity extends AppCompatActivity {
             String mailingId = getIntent().getStringExtra(ExampleAction.EXTRA_KEY_MAILING_ID);
             List<Attribute> attributes = new LinkedList<Attribute>();
             attributes.add(new StringAttribute("payload", "{\"customData1\":\"exampleEvent\", \"customData2\":" + openForAction + ", \"customData3\":" + sendCustomEvent));
-            Event event = new Event(Constants.Notifications.SIMPLE_NOTIFICATION_EVENT_TYPE, "custom", new Date(), attributes, attribution, mailingId);
+            Event event = new Event("custom", "custom", new Date(), attributes, attribution, mailingId);
             MceSdk.getQueuedEventsClient().sendEvent(getApplicationContext(), event);
         }
 

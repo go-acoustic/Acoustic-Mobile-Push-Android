@@ -11,6 +11,7 @@ package co.acoustic.mobile.push.samples.android;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,8 +23,12 @@ import android.widget.Toast;
 import co.acoustic.mobile.push.sdk.api.MceSdk;
 import co.acoustic.mobile.push.sdk.api.OperationCallback;
 import co.acoustic.mobile.push.sdk.api.OperationResult;
+import co.acoustic.mobile.push.sdk.api.message.MessageProcessor;
+import co.acoustic.mobile.push.sdk.api.message.MessageSync;
 import co.acoustic.mobile.push.sdk.api.registration.RegistrationDetails;
 import co.acoustic.mobile.push.sdk.plugin.inapp.InAppManager;
+import co.acoustic.mobile.push.sdk.plugin.inapp.InAppMessageProcessor;
+import co.acoustic.mobile.push.sdk.plugin.inbox.InboxMessageProcessor;
 import co.acoustic.mobile.push.sdk.plugin.inbox.InboxMessagesClient;
 import co.acoustic.mobile.push.sdk.plugin.inbox.RichContent;
 
@@ -39,6 +44,7 @@ public class MainSampleMenuActivity extends ListSampleActivity {
     private static final int INAPP_INDEX = 3;
     private static final int INBOX_INDEX = 4;
     private static final int LOCATIONS_INDEX = 5;
+    private static final String TAG = "MainSampleMenuActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,21 +144,47 @@ public class MainSampleMenuActivity extends ListSampleActivity {
                 startActivity(intent);
             }
         } else if (position == INAPP_INDEX) {
-            InboxMessagesClient.loadInboxMessages(getApplicationContext(), new OperationCallback<List<RichContent>>() {
+            MessageSync.syncMessages(getApplicationContext(), new OperationCallback<MessageSync.SyncReport>() {
                 @Override
-                public void onSuccess(List<RichContent> richContents, OperationResult operationResult) {
-
+                public void onSuccess(MessageSync.SyncReport syncReport, OperationResult result) {
+                    InAppManager.show(getApplicationContext(), getSupportFragmentManager(), resourcesHelper.getId("con"));
+                    publishReport(syncReport);
                 }
 
                 @Override
-                public void onFailure(List<RichContent> richContents, OperationResult operationResult) {
-
+                public void onFailure(final MessageSync.SyncReport syncReport, final OperationResult result) {
+                    Log.d(TAG, "Message sync failed: "+syncReport.getFailureCause());
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), resourcesHelper.getString("message_sync_failed_toast")+": "+syncReport.getFailureCause(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    InAppManager.show(getApplicationContext(), getSupportFragmentManager(), resourcesHelper.getId("con"));
                 }
             });
-            InAppManager.show(getApplicationContext(), getSupportFragmentManager(), resourcesHelper.getId("con"));
+
             inAppShown = true;
         } else if (position == INBOX_INDEX) {
-            InboxMessagesClient.showInbox(getApplicationContext());
+            MessageSync.syncMessages(getApplicationContext(),  new OperationCallback<MessageSync.SyncReport>() {
+                @Override
+                public void onSuccess(MessageSync.SyncReport syncReport, OperationResult result) {
+                    InboxMessagesClient.showInbox(getApplicationContext());
+                    publishReport(syncReport);
+                }
+
+                @Override
+                public void onFailure(final MessageSync.SyncReport syncReport, final OperationResult result) {
+                    Log.d(TAG, "Message sync failed: "+syncReport.getFailureCause());
+                    InboxMessagesClient.showInbox(getApplicationContext());
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), resourcesHelper.getString("message_sync_failed_toast")+": "+syncReport.getFailureCause(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            });
         } else if (position == LOCATIONS_INDEX) {
             RegistrationDetails registrationDetails = MceSdk.getRegistrationClient().getRegistrationDetails(getApplicationContext());
             if (registrationDetails.getChannelId() == null || registrationDetails.getChannelId().length() == 0) {
@@ -161,6 +193,28 @@ public class MainSampleMenuActivity extends ListSampleActivity {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), LocationActivity.class);
                 startActivity(intent);
+            }
+        }
+    }
+
+    private void publishReport(MessageSync.SyncReport syncReport) {
+        final StringBuilder msg = new StringBuilder();
+        for(MessageProcessor.ProcessReport processReport : syncReport.getReports()) {
+            if(processReport instanceof InAppMessageProcessor.Report) {
+                Log.d(TAG, "Message sync successful: Received "+processReport.getNewMessages().size()+" new inapp messages");
+                msg.append((msg.length()!= 0 ? "\n" : "")+processReport.getNewMessages().size()+" inapp new messages");
+            }
+            if(processReport instanceof InAppMessageProcessor.Report) {
+                Log.d(TAG, "Message sync successful: Received "+processReport.getNewMessages().size()+" new inbox messages");
+                msg.append((msg.length()!= 0 ? "\n" : "")+processReport.getNewMessages().size()+" inbox new messages");
+            }
+            if(msg.length() > 0) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), msg.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         }
     }

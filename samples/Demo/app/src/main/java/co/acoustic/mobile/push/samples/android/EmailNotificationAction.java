@@ -85,4 +85,9 @@ public class EmailNotificationAction implements MceNotificationAction {
     public boolean shouldDisplayNotification(Context context, NotificationDetails notificationDetails, Bundle bundle) {
         return true;
     }
+
+    @Override
+    public boolean shouldSendDefaultEvent(Context context) {
+        return true;
+    }
 }

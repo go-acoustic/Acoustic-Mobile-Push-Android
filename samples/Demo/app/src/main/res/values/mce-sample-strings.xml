@@ -32,6 +32,7 @@
 
     <string name="no_sdk_reg_toast">SDK is not registered yet</string>
     <string name="no_msg_svc_toast">Messaging service is not registered yet</string>
+    <string name="message_sync_failed_toast">Message sync failed</string>
 
     <string name="attributes_name">User Attributes</string>
     <string name="attributes_view_title">Send User Attributes</string>

@@ -19,15 +19,24 @@ import android.os.Build;
 import android.util.Log;
 
 
+import com.google.android.gms.location.LocationRequest;
+
 import co.acoustic.mobile.push.samples.android.layout.ResourcesHelper;
 import co.acoustic.mobile.push.sdk.api.MceApplication;
 import co.acoustic.mobile.push.sdk.api.MceSdk;
+import co.acoustic.mobile.push.sdk.api.MceSdkConfiguration;
 import co.acoustic.mobile.push.sdk.api.notification.NotificationsPreference;
+import co.acoustic.mobile.push.sdk.db.DefaultSdkDatabaseSecretKeyGenerator;
+import co.acoustic.mobile.push.sdk.db.android.AndroidDatabaseImpl;
+import co.acoustic.mobile.push.sdk.encryption.DefaultSdkEncryptionProvider;
 import co.acoustic.mobile.push.sdk.registration.RegistrationClientImpl;
+import co.acoustic.mobile.push.sdk.util.Logger;
 
 public class SampleApplication extends MceApplication {
 
     public static final String MCE_SAMPLE_NOTIFICATION_CHANNEL_ID = "mce_sample_channel";
+
+    private static final boolean READ_CONFIG_FROM_ASSETS = true;
 
     @Override
     public void onCreate() {
@@ -64,6 +73,68 @@ public class SampleApplication extends MceApplication {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel(getApplicationContext());
         }
+    }
+
+    @Override
+    protected MceSdkConfiguration getMceSdkConfiguration() {
+        if(READ_CONFIG_FROM_ASSETS) {
+            return null;
+        } else {
+            MceSdkConfiguration mceSdkConfiguration = new MceSdkConfiguration("YOUR_APP_KEY","");
+            mceSdkConfiguration.setBaseUrl("https://mobile-sdk-lib-ca-1.brilliantcollector.com");
+            mceSdkConfiguration.setAutoInitialize(true);
+            mceSdkConfiguration.setAutoReinitialize(true);
+
+            mceSdkConfiguration.setGroupNotificationsByAttribution(true);
+            mceSdkConfiguration.setInvalidateExistingUser(false);
+            mceSdkConfiguration.setMessagingService(MceSdkConfiguration.MessagingService.fcm);
+
+            mceSdkConfiguration.setSessionsEnabled(true);
+            mceSdkConfiguration.setSessionTimeout(20);
+
+            mceSdkConfiguration.setMetricTimeInterval(20);
+            mceSdkConfiguration.setLogFile(false);
+            mceSdkConfiguration.setLogLevel(Logger.LogLevel.error);
+            mceSdkConfiguration.setLogIterations(1);
+            mceSdkConfiguration.setLogIterationDurationInHours(0);
+            mceSdkConfiguration.setLogBufferSize(10);
+
+
+            mceSdkConfiguration.setUseFileImageCache(true);
+            mceSdkConfiguration.setUseInMemoryImageCache(true);
+            mceSdkConfiguration.setFileImageCacheCapacityInMB(100);
+            mceSdkConfiguration.setInMemoryImageCacheCapacityInMB(10);
+
+            MceSdkConfiguration.LocationConfiguration.SyncConfiguration syncConfiguration = mceSdkConfiguration.getLocationConfiguration().getSyncConfiguration();
+            syncConfiguration.setLocationResponsiveness(300);
+            syncConfiguration.setLocationSearchRadius(100000);
+            syncConfiguration.setSyncInterval(300);
+            syncConfiguration.setMaxLocationsForSearch(1);
+            syncConfiguration.setMaxLocationsForSearch(20);
+
+            MceSdkConfiguration.LocationConfiguration.RequestConfiguration requestConfiguration = mceSdkConfiguration.getLocationConfiguration().getRequestConfiguration();
+            requestConfiguration.setFastestInterval(1000);
+            requestConfiguration.setInterval(5000);
+            requestConfiguration.setSmallestDisplacement(100);
+            requestConfiguration.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+            MceSdkConfiguration.LocationConfiguration.IBeaconConfiguration iBeaconConfiguration = mceSdkConfiguration.getLocationConfiguration().getiBeaconConfiguration();
+            iBeaconConfiguration.setUuid("YOUR UUID");
+            iBeaconConfiguration.setBeaconForegroundScanDuration(5);
+            iBeaconConfiguration.setBeaconForegroundScanInterval(30);
+            iBeaconConfiguration.setBeaconBackgroundScanDuration(30);
+            iBeaconConfiguration.setBeaconBackgroundScanInterval(300);
+
+            MceSdkConfiguration.DatabaseConfiguration databaseConfiguration = mceSdkConfiguration.getDatabaseConfiguration();
+            databaseConfiguration.setDatabaseImplClassName(AndroidDatabaseImpl.class.getName());
+            databaseConfiguration.setEncrypted(false);
+            databaseConfiguration.setEncryptionProviderClassName(DefaultSdkEncryptionProvider.class.getName());
+            databaseConfiguration.setKeyGeneratorClassName(DefaultSdkDatabaseSecretKeyGenerator.class.getName());
+            databaseConfiguration.setKeyRotationIntervalInDays(30);
+
+            return mceSdkConfiguration;
+        }
+
     }
 
     private static final String PREFS_NAME = "IBM_MCE_SAMPLE";
