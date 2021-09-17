@@ -60,6 +60,10 @@ public class SampleNotifier extends MceBroadcastReceiver {
     }
 
     @Override
+    public void onInboxCountUpdate(Context context) {
+    }
+
+    @Override
     public void onC2dmError(Context context, String errorId) {
         Log.i(TAG, "ErrorId: " + errorId);
     }
@@ -217,6 +221,14 @@ public class SampleNotifier extends MceBroadcastReceiver {
         // Do not ship with this uncommented.
         // showNotification(context, locationType.name()+" "+locationEventType.name(), location.getId(), locationType.name()); }
 
+    }
+
+    @Override
+    public void onActionNotYetRegistered(Context context, String actionType) {
+    }
+
+    @Override
+    public void onActionNotRegistered(Context context, String actionType) {
     }
 
     @Override

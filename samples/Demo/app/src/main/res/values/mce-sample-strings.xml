@@ -76,7 +76,12 @@
     <string name="title_activity_location">Locations</string>
     <string name="enable_locations_text">Enable Locations</string>
     <string name="disable_locations_text">Disable Locations</string>
+    <string name="request_background_location_text">Enable Background Locations</string>
     <string name="show_geofences_text">Show Geofences</string>
+    <string name="bg_permission_required_title">Permission Required</string>
+    <string name="bg_permission_required_message">This app requires your permission to access location information in the background. This is used to detect geofences while the app is in the background. To grant this permission, select the \"%s\" option in the permissions menu.</string>
+    <string name="bg_permission_required_positive">Grant Permission</string>
+    <string name="bg_permission_required_negative">Cancel</string>
 
     <string name="title_activity_plugin_sample">Plugin Sample</string>
 

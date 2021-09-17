@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion '29.0.2'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
     }
@@ -20,30 +20,24 @@ android {
     lintOptions {
         abortOnError false
     }
-	
-	aaptOptions {  
-    additionalParameters "--no-version-vectors"  
-  }  
+
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    fileTree(dir: 'libs', include: '**/*.aar')
-            .each { File file ->
-        dependencies.add("implementation", [
-                name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name },
-                ext: 'aar'
-        ])}
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    
+
     implementation 'com.google.android.gms:play-services-base:17.1.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
     //Add this dependency if you use gcm
     //implementation 'com.google.android.gms:play-services-gcm:17.0.0'
-    
+
     implementation 'com.android.support:customtabs:29.0.0'
 
 }
