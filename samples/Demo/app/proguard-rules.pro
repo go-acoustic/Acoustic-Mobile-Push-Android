@@ -1,13 +1,9 @@
 # Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in D:/androidSDK/adt-bundle-windows-x86_64/sdk/tools/proguard/proguard-android.txt
-# You can edit the include path and order by changing the proguardFiles
-# directive in build.gradle.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
-
-# Add any project specific keep options here:
 
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
@@ -16,56 +12,10 @@
 #   public *;
 #}
 
--keep class * extends java.util.ListResourceBundle {
-    protected Object[][] getContents();
-}
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
 
--keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
-    public static final *** NULL;
-}
-
--keepnames @com.google.android.gms.common.annotation.KeepName class *
--keepclassmembernames class * {
-    @com.google.android.gms.common.annotation.KeepName *;
-}
-
--keepnames class * implements android.os.Parcelable {
-    public static final ** CREATOR;
-}
-
--dontpreverify
--repackageclasses ''
--allowaccessmodification
--optimizations !code/simplification/arithmetic
--keepattributes *Annotation*
--keepattributes InnerClasses
--keepparameternames
-
--keep public class * extends android.content.BroadcastReceiver {public *; protected *;}
--keep public class * extends co.acoustic.mobile.push.sdk.wi.WakefulIntentService {public *; protected *;}
--keep public class * extends android.app.IntentService {public *; protected *;}
--keep public class * extends android.app.Service {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.api.** {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.events.** {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.attributes.** {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.notification.NotificationsUtility {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.notification.NotificationsUtility$* {public *; protected *;}
--keep public class co.acoustic.mobile.push.sdk.Preferences {public *; protected *;}
-
--keep public class com.google.android.gms.common.GooglePlayServicesUtil {public *; protected *;}
-
--keep public class * extends android.content.ContentProvider
--keep public class * extends co.acoustic.mobile.push.sdk.api.notification.MceNotificationAction
-
-
-# added nov 17
--dontwarn rx.internal.util.unsafe.**
--keep class co.acoustic.mobile.push.sdk.** { *; }
--dontwarn co.acoustic.mobile.push.sdk.**
--keep public class com.google.android.gms.** { *; }
--dontwarn com.google.android.gms.**
--dontwarn javax.**
--keep class io.realm.** { *; }
--dontwarn io.realm.**
--keeppackagenames com.android.providers.contacts.**
-#end
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile

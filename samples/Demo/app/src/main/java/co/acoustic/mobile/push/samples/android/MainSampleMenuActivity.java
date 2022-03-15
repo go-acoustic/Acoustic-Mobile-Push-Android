@@ -204,7 +204,7 @@ public class MainSampleMenuActivity extends ListSampleActivity {
                 Log.d(TAG, "Message sync successful: Received "+processReport.getNewMessages().size()+" new inapp messages");
                 msg.append((msg.length()!= 0 ? "\n" : "")+processReport.getNewMessages().size()+" inapp new messages");
             }
-            if(processReport instanceof InAppMessageProcessor.Report) {
+            if(processReport instanceof InboxMessageProcessor.Report) {
                 Log.d(TAG, "Message sync successful: Received "+processReport.getNewMessages().size()+" new inbox messages");
                 msg.append((msg.length()!= 0 ? "\n" : "")+processReport.getNewMessages().size()+" inbox new messages");
             }

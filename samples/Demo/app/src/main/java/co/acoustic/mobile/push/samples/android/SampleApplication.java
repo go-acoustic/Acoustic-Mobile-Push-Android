@@ -10,6 +10,8 @@
 package co.acoustic.mobile.push.samples.android;
 
 
+import com.google.android.gms.location.LocationRequest;
+
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -17,9 +19,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
-
-
-import com.google.android.gms.location.LocationRequest;
 
 import co.acoustic.mobile.push.samples.android.layout.ResourcesHelper;
 import co.acoustic.mobile.push.sdk.api.MceApplication;
@@ -80,7 +79,7 @@ public class SampleApplication extends MceApplication {
         if(READ_CONFIG_FROM_ASSETS) {
             return null;
         } else {
-            MceSdkConfiguration mceSdkConfiguration = new MceSdkConfiguration("YOUR_APP_KEY","");
+            MceSdkConfiguration mceSdkConfiguration = new MceSdkConfiguration("YOUR_APP_KEY");
             mceSdkConfiguration.setBaseUrl("https://mobile-sdk-lib-ca-1.brilliantcollector.com");
             mceSdkConfiguration.setAutoInitialize(true);
             mceSdkConfiguration.setAutoReinitialize(true);

@@ -10,12 +10,10 @@
 
 package co.acoustic.mobile.push.samples.android.fcm;
 
-import android.content.Context;
-
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import android.content.Context;
 
 import co.acoustic.mobile.push.sdk.api.MceSdkConfiguration;
 import co.acoustic.mobile.push.sdk.api.MessagingApi;
@@ -30,12 +28,7 @@ public class CustomMessagingService implements MessagingService {
 
     @Override
     public boolean register(final Context context) {
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
-            @Override
-            public void onSuccess(InstanceIdResult instanceIdResult) {
-                MessagingApi.reportToken(context, instanceIdResult.getToken());
-            }
-        });
+        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(token -> MessagingApi.reportToken(context, token));
         return true;
     }
 

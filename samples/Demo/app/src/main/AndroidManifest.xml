@@ -3,18 +3,18 @@
     package="co.acoustic.mobile.push.samples.android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Uncomment this if you are not using location -->
-    <!--
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" tools:node="remove" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" tools:node="remove" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" tools:node="remove"/>
-    -->
-
-    <!-- Uncomment this if you're not using bluetooth -->
-    <!--
-    <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"  tools:node="remove"/>
-    -->
+    <!-- CALL_PHONE is optional. It is only required is the dial action is used -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- ACCESS_FINE_LOCATION is optional. It is only required if location services needs to use GPS location for features such as Geofencing -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- ACCESS_COARSE_LOCATION is optional. It is only required if location services needs to use network location for features such as Geofencing -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- ACCESS_BACKGROUND_LOCATION is optional. It is only required if location services needs to use GPS location for features such as Geofencing -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- BLUETOOTH is optional. It is only required if iBeacons are supported -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- BLUETOOTH_ADMIN is optional. It is only required if iBeacons are supported -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <queries>
         <intent>
@@ -44,7 +44,8 @@
 
         <activity
             android:name=".MainSampleMenuActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -96,7 +97,9 @@
                 android:value=".MainSampleMenuActivity" />
         </activity>
 
-        <receiver android:name="co.acoustic.mobile.push.samples.android.SampleNotifier" >
+        <receiver
+            android:name="co.acoustic.mobile.push.samples.android.SampleNotifier"
+            android:exported="false">
             <intent-filter>
                 <action android:name="co.acoustic.mobile.push.sdk.NOTIFIER" />
             </intent-filter>
