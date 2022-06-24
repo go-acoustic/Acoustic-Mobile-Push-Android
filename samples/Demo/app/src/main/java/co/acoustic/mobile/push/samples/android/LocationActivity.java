@@ -87,6 +87,19 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
     };
 
     /*
+     *  Starting with Android 12 (API Level 31), the the new BLUETOOTH_SCAN
+     *  permission must be requested in order for iBeacons to work.
+     */
+    @RequiresApi(api = Build.VERSION_CODES.S)
+    private static final String[] LOCATION_PERMISSIONS_ANDROID_S_OR_LATER = {
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.BLUETOOTH,
+            Manifest.permission.BLUETOOTH_ADMIN,
+            Manifest.permission.BLUETOOTH_SCAN
+    };
+
+    /*
      *  Example permission request codes to use when requesting permissions
      */
     private static final int REQUEST_LOCATION_PERMISSIONS = 0;
@@ -155,14 +168,20 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
          */
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
 
+            /* First, get the right batch of primary location permissions to check on.
+             */
+            String[] primaryPermissions = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+                    ? LOCATION_PERMISSIONS_ANDROID_S_OR_LATER
+                    : LOCATION_PERMISSIONS_ANDROID_R_OR_LATER;
+
             /*
              *  First check if the primary location permissions have been granted.
              *  Be sure to request these first before ACCESS_BACKGROUND_LOCATION
              */
-            if (!checkSelfPermissions(activity, LOCATION_PERMISSIONS_ANDROID_R_OR_LATER)) {
+            if (!checkSelfPermissions(activity, primaryPermissions)) {
                 ActivityCompat.requestPermissions(
                         activity,
-                        LOCATION_PERMISSIONS_ANDROID_R_OR_LATER,
+                        primaryPermissions,
                         REQUEST_LOCATION_PERMISSIONS
                 );
 

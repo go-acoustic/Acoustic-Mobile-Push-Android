@@ -18,5 +18,8 @@
         <item name="android:textColorPrimaryDisableOnly">#2B2E50</item>
     </style>
 
+    <style name="AppTheme.Location">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 
 </resources>

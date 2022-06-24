@@ -3,8 +3,6 @@
     package="co.acoustic.mobile.push.samples.android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- CALL_PHONE is optional. It is only required is the dial action is used -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- ACCESS_FINE_LOCATION is optional. It is only required if location services needs to use GPS location for features such as Geofencing -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- ACCESS_COARSE_LOCATION is optional. It is only required if location services needs to use network location for features such as Geofencing -->
@@ -15,11 +13,16 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <!-- BLUETOOTH_ADMIN is optional. It is only required if iBeacons are supported -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- BLUETOOTH_SCAN is optional. It is only required if iBeacons are supported -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 
     <queries>
+        <!-- Required for handling notifications that open the device's dialer app -->
         <intent>
             <action android:name="android.intent.action.DIAL" />
         </intent>
+
+        <!-- Required for handling notifications that open the device -->
         <intent>
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="https"/>
@@ -83,7 +86,8 @@
 
         <activity
             android:name="co.acoustic.mobile.push.samples.android.LocationActivity"
-            android:label="@string/title_activity_location" >
+            android:label="@string/title_activity_location"
+            android:theme="@style/AppTheme.Location">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainSampleMenuActivity" />

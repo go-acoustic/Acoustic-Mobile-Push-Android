@@ -16,11 +16,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
+import androidx.core.app.NotificationCompat;
+import co.acoustic.mobile.push.samples.android.layout.ResourcesHelper;
 import co.acoustic.mobile.push.sdk.api.MceBroadcastReceiver;
 import co.acoustic.mobile.push.sdk.api.MceSdk;
 import co.acoustic.mobile.push.sdk.api.attribute.Attribute;
@@ -30,11 +35,6 @@ import co.acoustic.mobile.push.sdk.api.notification.NotificationDetails;
 import co.acoustic.mobile.push.sdk.api.registration.RegistrationDetails;
 import co.acoustic.mobile.push.sdk.location.MceLocation;
 import co.acoustic.mobile.push.sdk.plugin.inapp.InAppManager;
-import co.acoustic.mobile.push.samples.android.layout.ResourcesHelper;
-
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
 
 public class SampleNotifier extends MceBroadcastReceiver {
 
@@ -241,6 +241,7 @@ public class SampleNotifier extends MceBroadcastReceiver {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent actionIntent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
         actionIntent.putExtra(ACTION_KEY, action);
+        int flags = Build.VERSION.SDK_INT < Build.VERSION_CODES.M ? 0 : PendingIntent.FLAG_IMMUTABLE;
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, SampleApplication.MCE_SAMPLE_NOTIFICATION_CHANNEL_ID)
                 .setSmallIcon(resourcesHelper.getDrawableId("icon"))
                 .setContentTitle(subject)
@@ -249,7 +250,7 @@ public class SampleNotifier extends MceBroadcastReceiver {
                 .setWhen(System.currentTimeMillis())
                 .setTicker("MCE Sample")
                 .setContentInfo("Mce Sample Info")
-                .setContentIntent(PendingIntent.getActivity(context, action.hashCode(), actionIntent, 0));
+                .setContentIntent(PendingIntent.getActivity(context, action.hashCode(), actionIntent, flags));
         Notification notification = builder.build();
         setNotificationPreferences(context, notification);
         UUID notifUUID = UUID.randomUUID();

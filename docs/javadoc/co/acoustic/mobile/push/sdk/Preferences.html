@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":10,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9};
+var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":10,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -238,53 +238,58 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#migrate(android.content.Context)">migrate</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#remove(android.content.Context,java.lang.String)">remove</a></span>&#8203;(android.content.Context&nbsp;context,
       java.lang.String&nbsp;key)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBoolean(android.content.Context,java.lang.String,boolean)">setBoolean</a></span>&#8203;(android.content.Context&nbsp;context,
           java.lang.String&nbsp;key,
           boolean&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDate(android.content.Context,java.lang.String,java.util.Date)">setDate</a></span>&#8203;(android.content.Context&nbsp;context,
        java.lang.String&nbsp;key,
        java.util.Date&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFloat(android.content.Context,java.lang.String,float)">setFloat</a></span>&#8203;(android.content.Context&nbsp;context,
         java.lang.String&nbsp;key,
         float&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInt(android.content.Context,java.lang.String,int)">setInt</a></span>&#8203;(android.content.Context&nbsp;context,
       java.lang.String&nbsp;key,
       int&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLong(android.content.Context,java.lang.String,long)">setLong</a></span>&#8203;(android.content.Context&nbsp;context,
        java.lang.String&nbsp;key,
        long&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setString(android.content.Context,java.lang.String,java.lang.String)">setString</a></span>&#8203;(android.content.Context&nbsp;context,
          java.lang.String&nbsp;key,
          java.lang.String&nbsp;value)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStringSet(android.content.Context,java.lang.String,java.util.Set)">setStringSet</a></span>&#8203;(android.content.Context&nbsp;context,
             java.lang.String&nbsp;key,
@@ -510,10 +515,19 @@ extends java.lang.Object</pre>
 <a id="getAll(android.content.Context)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getAll</h4>
 <pre class="methodSignature">public static&nbsp;java.util.Map&lt;java.lang.String,&#8203;?&gt;&nbsp;getAll&#8203;(android.content.Context&nbsp;context)</pre>
+</li>
+</ul>
+<a id="migrate(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>migrate</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;migrate&#8203;(android.content.Context&nbsp;context)</pre>
 </li>
 </ul>
 </li>

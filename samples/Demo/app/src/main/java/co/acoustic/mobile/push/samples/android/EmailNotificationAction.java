@@ -9,21 +9,22 @@
  */
 package co.acoustic.mobile.push.samples.android;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.Map;
+
+import co.acoustic.mobile.push.sdk.api.MceSdk;
 import co.acoustic.mobile.push.sdk.api.notification.Action;
 import co.acoustic.mobile.push.sdk.api.notification.MceNotificationAction;
 import co.acoustic.mobile.push.sdk.api.notification.NotificationDetails;
 import co.acoustic.mobile.push.sdk.util.Logger;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.Map;
 
 public class EmailNotificationAction implements MceNotificationAction {
 
@@ -56,8 +57,7 @@ public class EmailNotificationAction implements MceNotificationAction {
                 intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
                 try {
                     if(fromNotification) {
-                        Intent it = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
-                        context.sendBroadcast(it);
+                        MceSdk.closeSystemDialogs(context);
                     }
                     context.startActivity(intent);
                 } catch (android.content.ActivityNotFoundException e) {

@@ -9,14 +9,12 @@
  */
 package co.acoustic.mobile.push.samples.android;
 
-
 import com.google.android.gms.location.LocationRequest;
 
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 
@@ -134,16 +132,6 @@ public class SampleApplication extends MceApplication {
             return mceSdkConfiguration;
         }
 
-    }
-
-    private static final String PREFS_NAME = "IBM_MCE_SAMPLE";
-
-    private static SharedPreferences getSharedPref(Context context) {
-        return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-    }
-
-    private static SharedPreferences.Editor getEditor(Context context) {
-        return getSharedPref(context).edit();
     }
 
     @TargetApi(26)

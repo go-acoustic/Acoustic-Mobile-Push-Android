@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9};
+var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -176,67 +176,72 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="attribute/AttributesClient.html" title="interface in co.acoustic.mobile.push.sdk.api.attribute">AttributesClient</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributesClient(boolean)">getAttributesClient</a></span>&#8203;(boolean&nbsp;synched)</code></th>
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#closeSystemDialogs(android.content.Context)">closeSystemDialogs</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="attribute/AttributesClient.html" title="interface in co.acoustic.mobile.push.sdk.api.attribute">AttributesClient</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributesClient(java.util.concurrent.Executor)">getAttributesClient</a></span>&#8203;(java.util.concurrent.Executor&nbsp;executor)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributesClient(boolean)">getAttributesClient</a></span>&#8203;(boolean&nbsp;synched)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="event/EventsClient.html" title="interface in co.acoustic.mobile.push.sdk.api.event">EventsClient</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEventsClient(boolean)">getEventsClient</a></span>&#8203;(boolean&nbsp;synched)</code></th>
+<td class="colFirst"><code>static <a href="attribute/AttributesClient.html" title="interface in co.acoustic.mobile.push.sdk.api.attribute">AttributesClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAttributesClient(java.util.concurrent.Executor)">getAttributesClient</a></span>&#8203;(java.util.concurrent.Executor&nbsp;executor)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="event/EventsClient.html" title="interface in co.acoustic.mobile.push.sdk.api.event">EventsClient</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEventsClient(java.util.concurrent.Executor)">getEventsClient</a></span>&#8203;(java.util.concurrent.Executor&nbsp;executor)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEventsClient(boolean)">getEventsClient</a></span>&#8203;(boolean&nbsp;synched)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="event/EventsClient.html" title="interface in co.acoustic.mobile.push.sdk.api.event">EventsClient</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEventsClient(java.util.concurrent.Executor)">getEventsClient</a></span>&#8203;(java.util.concurrent.Executor&nbsp;executor)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="notification/NotificationsClient.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationsClient</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNotificationsClient()">getNotificationsClient</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="attribute/QueuedAttributesClient.html" title="interface in co.acoustic.mobile.push.sdk.api.attribute">QueuedAttributesClient</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQueuedAttributesClient()">getQueuedAttributesClient</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="event/QueueEventsClient.html" title="interface in co.acoustic.mobile.push.sdk.api.event">QueueEventsClient</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQueuedEventsClient()">getQueuedEventsClient</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="registration/RegistrationClient.html" title="interface in co.acoustic.mobile.push.sdk.api.registration">RegistrationClient</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRegistrationClient()">getRegistrationClient</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSdkVerNumber()">getSdkVerNumber</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the SDK version number.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleOnPause(android.content.Context)">handleOnPause</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
 <td class="colLast">
 <div class="block">This message should be called when the activity's onPause method is called.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleOnResume(android.content.Context)">handleOnResume</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
 <td class="colLast">
 <div class="block">This message should be called when the activity's onResume method is called.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSdkStopped(android.content.Context)">isSdkStopped</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
 <td class="colLast">
@@ -384,7 +389,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <a id="isSdkStopped(android.content.Context)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isSdkStopped</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isSdkStopped&#8203;(android.content.Context&nbsp;context)</pre>
@@ -395,6 +400,15 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if stopped, false otherwise</dd>
 </dl>
+</li>
+</ul>
+<a id="closeSystemDialogs(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>closeSystemDialogs</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;closeSystemDialogs&#8203;(android.content.Context&nbsp;context)</pre>
 </li>
 </ul>
 </li>

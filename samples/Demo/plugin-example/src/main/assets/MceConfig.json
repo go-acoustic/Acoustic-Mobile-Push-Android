@@ -1,6 +1,6 @@
 {
   "Please note: if you are in Europe, you may need to change the value in 'baseUrl' below to": "https://mobile-sdk-lib-eu-1.brilliantcollector.com",
-  "baseUrl": "https://mobile-sdk-lib-ca-1.brilliantcollector.com",
+  "baseUrl": "https://mobile-sdk-lib-XX-Y.brilliantcollector.com",
 
   "appKey": {
     "prod":"YOUR APP KEY"
@@ -33,7 +33,7 @@
   "Choose one of the following values for loglevel: ": ["none", "error", "warn", "info", "debug", "verbose"],
   "loglevel": "error",
 
-  "Please note, the log iteration files will be stored under": "<application cache folder on sdcard>/ibm-mce-android-sdk/logs/<installation time folder, format: yyyy-MM-dd-HH-mm-ss>",
+  "Please note, the log iteration files will be stored under": "<application cache folder on sdcard>/acoustic-mce-android-sdk/logs/<installation time folder, format: yyyy-MM-dd-HH-mm-ss>",
   "logfile": false,
 
   "The number of log iteration files": "After reaching this number, the log files will be overwritten in order",
