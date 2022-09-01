@@ -31,10 +31,9 @@
 
 
     <application
-        tools:replace="android:allowBackup, android:appComponentFactory, android:name"
+        tools:replace="android:allowBackup, android:name"
         android:name=".SampleApplication"
         android:allowBackup="false"
-        android:appComponentFactory="sdk"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
