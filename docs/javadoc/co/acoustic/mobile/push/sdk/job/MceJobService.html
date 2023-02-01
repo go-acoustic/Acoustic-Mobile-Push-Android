@@ -6,15 +6,16 @@
 <title>MceJobService (sdk API)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
-<link rel="stylesheet" type="text/css" href="../../../../../../jquery/jquery-ui.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../../../../jquery/jquery-ui.min.css" title="Style">
+<link rel="stylesheet" type="text/css" href="../../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
 <script type="text/javascript" src="../../../../../../jquery/jszip/dist/jszip.min.js"></script>
 <script type="text/javascript" src="../../../../../../jquery/jszip-utils/dist/jszip-utils.min.js"></script>
 <!--[if IE]>
 <script type="text/javascript" src="../../../../../../jquery/jszip-utils/dist/jszip-utils-ie.min.js"></script>
 <![endif]-->
-<script type="text/javascript" src="../../../../../../jquery/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="../../../../../../jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="../../../../../../jquery/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../../../../jquery/jquery-ui.min.js"></script>
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -26,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9,"i7":9};
+var data = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -164,7 +165,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <ul class="blockList">
 <li class="blockList">
 <!-- =========== FIELD SUMMARY =========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="field.summary">
 <!--   -->
@@ -232,7 +233,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 </ul>
 </section>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="constructor.summary">
 <!--   -->
@@ -253,7 +254,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 </ul>
 </section>
 <!-- ========== METHOD SUMMARY =========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="method.summary">
 <!--   -->
@@ -267,23 +268,28 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearAllJobs(android.content.Context)">clearAllJobs</a></span>&#8203;(android.content.Context&nbsp;context)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected static android.os.PersistableBundle</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createJobPersistableBundle(java.lang.Class,java.lang.Object,java.lang.String)">createJobPersistableBundle</a></span>&#8203;(java.lang.Class&nbsp;mceSdkJobClass,
                           java.lang.Object&nbsp;parameters,
                           java.lang.String&nbsp;jobID)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStartJob(android.app.job.JobParameters)">onStartJob</a></span>&#8203;(android.app.job.JobParameters&nbsp;jobParameters)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onStopJob(android.app.job.JobParameters)">onStopJob</a></span>&#8203;(android.app.job.JobParameters&nbsp;jobParameters)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reportJobFinished(android.app.job.JobParameters,java.lang.Object,co.acoustic.mobile.push.sdk.job.MceSdkOneTimeJob,java.lang.String,boolean,long,boolean)">reportJobFinished</a></span>&#8203;(android.app.job.JobParameters&nbsp;jobParameters,
                  java.lang.Object&nbsp;parameters,
@@ -294,7 +300,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
                  boolean&nbsp;jobStarted)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reportJobFinished(android.app.job.JobParameters,java.lang.Object,co.acoustic.mobile.push.sdk.job.MceSdkRepeatingJob,java.lang.String,long,boolean)">reportJobFinished</a></span>&#8203;(android.app.job.JobParameters&nbsp;jobParameters,
                  java.lang.Object&nbsp;parameters,
@@ -304,7 +310,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
                  boolean&nbsp;jobStarted)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#schedule(android.content.Context,java.lang.Class,java.lang.Object,long,java.lang.String)">schedule</a></span>&#8203;(android.content.Context&nbsp;context,
         java.lang.Class&nbsp;mceSdkJobClass,
@@ -313,7 +319,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
         java.lang.String&nbsp;jobId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleForLater(android.content.Context,java.lang.Class,java.lang.Object,long,java.lang.String)">scheduleForLater</a></span>&#8203;(android.content.Context&nbsp;context,
                 java.lang.Class&nbsp;mceSdkJobClass,
@@ -322,7 +328,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
                 java.lang.String&nbsp;jobId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scheduleForNow(android.content.Context,java.lang.Class,java.lang.Object,java.lang.String)">scheduleForNow</a></span>&#8203;(android.content.Context&nbsp;context,
               java.lang.Class&nbsp;mceSdkJobClass,
@@ -376,7 +382,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <ul class="blockList">
 <li class="blockList">
 <!-- ============ FIELD DETAIL =========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="field.detail">
 <!--   -->
@@ -425,7 +431,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 </ul>
 </section>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="constructor.detail">
 <!--   -->
@@ -444,7 +450,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 </ul>
 </section>
 <!-- ============ METHOD DETAIL ========== -->
-<section role="region">
+<section>
 <ul class="blockList">
 <li class="blockList"><a id="method.detail">
 <!--   -->
@@ -544,7 +550,7 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <a id="onStopJob(android.app.job.JobParameters)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>onStopJob</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;onStopJob&#8203;(android.app.job.JobParameters&nbsp;jobParameters)</pre>
@@ -552,6 +558,15 @@ implements <a href="../SdkTags.html" title="interface in co.acoustic.mobile.push
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>onStopJob</code>&nbsp;in class&nbsp;<code>android.app.job.JobService</code></dd>
 </dl>
+</li>
+</ul>
+<a id="clearAllJobs(android.content.Context)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>clearAllJobs</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;clearAllJobs&#8203;(android.content.Context&nbsp;context)</pre>
 </li>
 </ul>
 </li>

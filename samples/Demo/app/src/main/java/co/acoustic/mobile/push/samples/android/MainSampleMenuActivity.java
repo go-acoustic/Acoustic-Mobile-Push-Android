@@ -9,7 +9,13 @@
  */
 package co.acoustic.mobile.push.samples.android;
 
+import static co.acoustic.mobile.push.sdk.plugin.carousel.CarouselIterationOperation.DIALOG_MESSAGE;
+import static co.acoustic.mobile.push.sdk.plugin.carousel.CarouselIterationOperation.DIALOG_TITLE;
+import static co.acoustic.mobile.push.sdk.plugin.carousel.CarouselIterationOperation.DIALOG_TYPE;
+
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,17 +26,20 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationManagerCompat;
+
 import co.acoustic.mobile.push.sdk.api.MceSdk;
 import co.acoustic.mobile.push.sdk.api.OperationCallback;
 import co.acoustic.mobile.push.sdk.api.OperationResult;
 import co.acoustic.mobile.push.sdk.api.message.MessageProcessor;
 import co.acoustic.mobile.push.sdk.api.message.MessageSync;
 import co.acoustic.mobile.push.sdk.api.registration.RegistrationDetails;
+import co.acoustic.mobile.push.sdk.notification.MceNotificationActionImpl;
 import co.acoustic.mobile.push.sdk.plugin.inapp.InAppManager;
 import co.acoustic.mobile.push.sdk.plugin.inapp.InAppMessageProcessor;
 import co.acoustic.mobile.push.sdk.plugin.inbox.InboxMessageProcessor;
 import co.acoustic.mobile.push.sdk.plugin.inbox.InboxMessagesClient;
-import co.acoustic.mobile.push.sdk.plugin.inbox.RichContent;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -45,11 +54,14 @@ public class MainSampleMenuActivity extends ListSampleActivity {
     private static final int INBOX_INDEX = 4;
     private static final int LOCATIONS_INDEX = 5;
     private static final String TAG = "MainSampleMenuActivity";
+    private static final int REQUEST_NOTIFICATION_PERMISSIONS = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         showMainView();
+        requestPermissions();
+        checkToShowDialog();
     }
 
     @Override
@@ -197,6 +209,23 @@ public class MainSampleMenuActivity extends ListSampleActivity {
         }
     }
 
+    private void checkToShowDialog() {
+        String dialogTitle = getIntent().getStringExtra(DIALOG_TITLE);
+        String dialogType = getIntent().getStringExtra(DIALOG_TYPE);
+        String msg = getIntent().getStringExtra(DIALOG_MESSAGE);
+        if (dialogType != null && dialogTitle != null && msg != null) {
+            if (dialogType.equals("carousel")) {
+                new AlertDialog.Builder(this)
+                        .setTitle(dialogTitle)
+                        .setMessage(msg)
+                        .setPositiveButton("Okay", (dialog, which) -> {
+                        })
+                        .create()
+                        .show();
+            }
+        }
+    }
+
     private void publishReport(MessageSync.SyncReport syncReport) {
         final StringBuilder msg = new StringBuilder();
         for(MessageProcessor.ProcessReport processReport : syncReport.getReports()) {
@@ -215,6 +244,22 @@ public class MainSampleMenuActivity extends ListSampleActivity {
                         Toast.makeText(MainSampleMenuActivity.this.getApplicationContext(), msg.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        }
+    }
+
+    /**
+     * Requests for the Post_Notifications permission which is required on os 33
+     */
+    private void requestPermissions() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            String[] primaryPermissions = {"android.permission.POST_NOTIFICATIONS"};
+            if (!NotificationManagerCompat.from(this).areNotificationsEnabled()) {
+                ActivityCompat.requestPermissions(
+                        this,
+                        primaryPermissions,
+                        REQUEST_NOTIFICATION_PERMISSIONS
+                );
             }
         }
     }

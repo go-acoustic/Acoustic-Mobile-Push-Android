@@ -60,6 +60,8 @@
     -keep public class * extends android.content.ContentProvider
     -keep public class * extends co.acoustic.mobile.push.sdk.api.notification.MceNotificationAction
 
+    -keep public class co.acoustic.mobile.push.sdk.api.notification.MceNotificationAction
+
     -keep class co.acoustic.mobile.push.samples.android.fcm.CustomMessagingService {public *; protected *;}
     -keep class co.acoustic.mobile.push.sdk.plugin.carousel.CarouselNotificationType {public *; protected *;}
     -keep class co.acoustic.mobile.push.sdk.plugin.inapp.InAppMessageProcessor {public *; protected *;}
