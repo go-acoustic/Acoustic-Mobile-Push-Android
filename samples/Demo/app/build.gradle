@@ -2,8 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion '29.0.3'
+    compileSdk 33
 
     defaultConfig {
         applicationId "co.acoustic.mobile.push.samples.android"
@@ -20,29 +19,35 @@ android {
         }
     }
 
-    lintOptions {
-        abortOnError false
-    }
-	
-	aaptOptions {
-        additionalParameters "--no-version-vectors"
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'co.acoustic.mobile.push.samples.android'
+    androidResources {
+        additionalParameters '--no-version-vectors'
+    }
+    lint {
+        abortOnError false
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation project(':sdk')
+    implementation project(':plugin-calendar')
+    implementation project(':plugin-carousel')
+    implementation project(':plugin-displayweb')
+    implementation project(':plugin-inapp')
+    implementation project(':plugin-inbox')
+    implementation project(':plugin-snooze')
     implementation project(':plugin-example')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.annotation:annotation:1.7.1'
 
-    implementation 'com.google.android.gms:play-services-base:17.6.0'
-    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-base:18.3.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
 
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
@@ -56,7 +61,7 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$androidx_test_core_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_test_junit_version"
 }
-
+apply plugin: 'org.owasp.dependencycheck'
 apply plugin: 'com.google.gms.google-services'
 repositories {
     mavenCentral()

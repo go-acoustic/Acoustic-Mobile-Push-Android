@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.acoustic.mobile.push.samples.android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- ACCESS_FINE_LOCATION is optional. It is only required if location services needs to use GPS location for features such as Geofencing -->
