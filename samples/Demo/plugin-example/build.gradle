@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: "checkstyle"
 
 android {
     compileSdk 33
@@ -27,6 +28,20 @@ android {
     lint {
         abortOnError false
     }
+}
+
+task checkstyle(type: Checkstyle, group: "verification") {
+    source "src"
+    include "**/*.java"
+    exclude "**/gen/**"
+    exclude "**/R.java"
+    exclude "**/BuildConfig.java"
+
+    configFile file("config/checkstyle/checkstyle.xml")
+    configProperties = ["suppressionFile": file("config/checkstyle/checkstyle_suppressions.xml")]
+
+    // empty classpath
+    classpath = files()
 }
 
 dependencies {
