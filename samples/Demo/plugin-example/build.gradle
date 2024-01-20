@@ -3,31 +3,33 @@ apply plugin: 'kotlin-android'
 apply plugin: "checkstyle"
 
 android {
-    compileSdk 33
+    compileSdk project.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 33
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
     }
+
     buildTypes {
+        debug {
+            testCoverageEnabled false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildscript {
-        System.properties['com.android.build.gradle.overrideVersionCheck'] = 'true'
-    }
 
+    testOptions {
+        animationsDisabled true
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     namespace 'co.acoustic.mobile.push.sdk.plugin.example'
-    lint {
-        abortOnError false
-    }
 }
 
 task checkstyle(type: Checkstyle, group: "verification") {
@@ -46,11 +48,12 @@ task checkstyle(type: Checkstyle, group: "verification") {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation "androidx.appcompat:appcompat:" + project.ext.androidxLibVersion
     implementation project(':sdk')
-    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "androidx.core:core-ktx:" + project.ext.kotlinCoreLibVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
 repositories {
     mavenCentral()
 }

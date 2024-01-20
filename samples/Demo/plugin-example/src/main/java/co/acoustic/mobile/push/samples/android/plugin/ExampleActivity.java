@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class ExampleActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class ExampleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle context) {
-        HashMap<String, String> payload = (HashMap<String, String>) getIntent().getExtras().getSerializable(ExampleAction.EXTRA_KEY_PAYLOAD);
+        HashMap<String, String> payload = (HashMap<String, String>) Objects.requireNonNull(getIntent().getExtras()).getSerializable(ExampleAction.EXTRA_KEY_PAYLOAD);
         String payloadAsString = payload.toString();
         boolean sendCustomEvent = getIntent().getBooleanExtra(ExampleAction.EXTRA_KEY_SEND_CUSTOM_EVENT, true);
         boolean openForAction = getIntent().getBooleanExtra(ExampleAction.EXTRA_KEY_OPEN_FOR_ACTION, true);

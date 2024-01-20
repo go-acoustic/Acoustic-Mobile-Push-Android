@@ -310,6 +310,7 @@ public class LocationActivity extends FragmentActivity implements OnMapReadyCall
          *  If the request was for ACCESS_BACKGROUND_LOCATIONS and the
          *  permission was granted, enable location support
          */
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_BACKGROUND_PERMISSIONS) {
             if (checkPermissionsGranted(grantResults)) {
                 LocationManager.enableLocationSupport(getApplicationContext());
