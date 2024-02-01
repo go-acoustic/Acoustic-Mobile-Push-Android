@@ -15,6 +15,7 @@ import android.annotation.TargetApi;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.util.Log;
 
@@ -60,12 +61,15 @@ public class SampleApplication extends MceApplication {
         MceSdk.getNotificationsClient().getNotificationsPreference().setVibrateEnabled(getApplicationContext(), true);
         long[] vibrate = { 0, 100, 200, 300 };
         MceSdk.getNotificationsClient().getNotificationsPreference().setVibrationPattern(getApplicationContext(), vibrate);
-        MceSdk.getNotificationsClient().getNotificationsPreference().setIcon(getApplicationContext(),resourcesHelper.getDrawableId("icon"));
+        MceSdk.getNotificationsClient().getNotificationsPreference().setIcon(getApplicationContext(),resourcesHelper.getDrawableId("ic_action_back"));
         MceSdk.getNotificationsClient().getNotificationsPreference().setLightsEnabled(getApplicationContext(), true);
         int ledARGB = 0x00a2ff;
         int ledOnMS = 300;
         int ledOffMS = 1000;
         MceSdk.getNotificationsClient().getNotificationsPreference().setLights(getApplicationContext(), new int[]{ledARGB, ledOnMS, ledOffMS});
+
+        // Notification icon background color - Pass in null or Color.TRANSPARENT for stock colors
+        MceSdk.getNotificationsClient().getNotificationsPreference().setIconColor(getApplicationContext(), Color.GREEN);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel(getApplicationContext());
