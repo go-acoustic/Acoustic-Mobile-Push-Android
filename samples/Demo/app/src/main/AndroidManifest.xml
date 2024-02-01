@@ -15,6 +15,10 @@
     <!-- BLUETOOTH_SCAN is optional. It is only required if iBeacons are supported -->
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <queries>
         <!-- Required for handling notifications that open the device's dialer app -->
         <intent>
