@@ -18,6 +18,7 @@ co.acoustic.mobile.push.sdk.db.android
 co.acoustic.mobile.push.sdk.db.custom
 co.acoustic.mobile.push.sdk.encryption
 co.acoustic.mobile.push.sdk.events
+co.acoustic.mobile.push.sdk.installreferrer
 co.acoustic.mobile.push.sdk.job
 co.acoustic.mobile.push.sdk.location
 co.acoustic.mobile.push.sdk.location.cognitive

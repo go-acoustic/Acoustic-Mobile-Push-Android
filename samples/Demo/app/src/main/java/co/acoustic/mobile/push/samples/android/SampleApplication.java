@@ -74,6 +74,10 @@ public class SampleApplication extends MceApplication {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel(getApplicationContext());
         }
+
+
+        MceSdk.getInstallReferrerMceClient().enableInstallReferrer(this);
+
     }
 
     @Override
