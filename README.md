@@ -4,6 +4,7 @@
   - acoustic-mobile-push-android-sdk-3.8.7.aar (Base library)
 - docs
  - javadoc of acoustic-mobile-push-android-sdk-3.8.7.aar
+- license 
 - plugins:
   - acoustic-mobile-push-android-sdk-plugin-calendar-3.8.7.aar
   - acoustic-mobile-push-android-sdk-plugin-calendar-3.8.7.zip (Javadocs)
