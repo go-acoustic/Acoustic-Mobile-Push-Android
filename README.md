@@ -18,6 +18,8 @@
   - acoustic-mobile-push-android-sdk-plugin-inbox.zip (Javadocs)
   - acoustic-mobile-push-android-sdk-plugin-snooze.aar
   - acoustic-mobile-push-android-sdk-plugin-snooze.zip (Javadocs)
+- MceConfig.json : Configuration file
+
 
 Sample code using the library can be found at https://github.com/Acoustic-Mobile-Push/SampleCode_AcousticMobilePush_Android_java/tree/main and a version using the beta version of the libraries at https://github.com/Acoustic-Mobile-Push/SampleCode_AcousticMobilePush_Android_java/tree/beta.
  
