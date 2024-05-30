@@ -173,7 +173,9 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int)" class="member-name-link">createBuilder</a><wbr>(android.content.Context&nbsp;context,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
  int&nbsp;icon)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Create notification builder.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static androidx.core.app.NotificationCompat.Builder</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCompatBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails)" class="member-name-link">createCompatBuilder</a><wbr>(android.content.Context&nbsp;context,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails)</code></div>
@@ -384,6 +386,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">android.app.Notification.Builder</span>&nbsp;<span class="element-name">createBuilder</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
  int&nbsp;icon)</span></div>
+<div class="block">Create notification builder. When an icon url in notification is sent or a large icon has been assigned and
+  if API 23 or greater, the notification will assign a large icon.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Application context.</dd>
+<dd><code>notificationDetails</code> - NotificationDetails object.</dd>
+<dd><code>icon</code> - Icon integer value to look up resource to set as small icon in notification.</dd>
+<dt>Returns:</dt>
+<dd>Notification.Builder object.</dd>
+</dl>
 </section>
 </li>
 <li>
