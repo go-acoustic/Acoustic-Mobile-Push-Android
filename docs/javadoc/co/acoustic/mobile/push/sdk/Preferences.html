@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Preferences</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Utility for preferences.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -103,7 +104,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -111,87 +112,118 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#clear(android.content.Context)" class="member-name-link">clear</a><wbr>(android.content.Context&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Used to clear key/values in shared preferences.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>?&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAll(android.content.Context)" class="member-name-link">getAll</a><wbr>(android.content.Context&nbsp;context)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get all the key/vales in shared preferences.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getBoolean(android.content.Context,java.lang.String,boolean)" class="member-name-link">getBoolean</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  boolean&nbsp;defValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get Boolean value from shared preferences.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDate(android.content.Context,java.lang.String,java.util.Date)" class="member-name-link">getDate</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;defValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFloat(android.content.Context,java.lang.String,float)" class="member-name-link">getFloat</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get Date value from shared preferences.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static float</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getFloat(android.content.Context,java.lang.String,float)" class="member-name-link">getFloat</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  float&nbsp;defValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get Float value from shared preferences.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getInt(android.content.Context,java.lang.String,int)" class="member-name-link">getInt</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  int&nbsp;defValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get int value from shared preferences.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static long</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getLong(android.content.Context,java.lang.String,long)" class="member-name-link">getLong</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  long&nbsp;defValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get Long value from shared preferences.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getString(android.content.Context,java.lang.String,java.lang.String)" class="member-name-link">getString</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get String value from shared preferences.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getStringSet(android.content.Context,java.lang.String,java.util.Set)" class="member-name-link">getStringSet</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;defaultValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Get StringSet value from shared preferences.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#migrate(android.content.Context)" class="member-name-link">migrate</a><wbr>(android.content.Context&nbsp;context)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#remove(android.content.Context,java.lang.String)" class="member-name-link">remove</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#remove(android.content.Context,java.lang.String)" class="member-name-link">remove</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setBoolean(android.content.Context,java.lang.String,boolean)" class="member-name-link">setBoolean</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Used to remove preference key/value.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setBoolean(android.content.Context,java.lang.String,boolean)" class="member-name-link">setBoolean</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  boolean&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setDate(android.content.Context,java.lang.String,java.util.Date)" class="member-name-link">setDate</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set Boolean value from shared preferences.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setDate(android.content.Context,java.lang.String,java.util.Date)" class="member-name-link">setDate</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setFloat(android.content.Context,java.lang.String,float)" class="member-name-link">setFloat</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set Date value from shared preferences.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setFloat(android.content.Context,java.lang.String,float)" class="member-name-link">setFloat</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  float&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setInt(android.content.Context,java.lang.String,int)" class="member-name-link">setInt</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set Float value from shared preferences.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setInt(android.content.Context,java.lang.String,int)" class="member-name-link">setInt</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  int&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setLong(android.content.Context,java.lang.String,long)" class="member-name-link">setLong</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set int value to shared preferences.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setLong(android.content.Context,java.lang.String,long)" class="member-name-link">setLong</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  long&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setString(android.content.Context,java.lang.String,java.lang.String)" class="member-name-link">setString</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set Long value from shared preferences.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setString(android.content.Context,java.lang.String,java.lang.String)" class="member-name-link">setString</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setStringSet(android.content.Context,java.lang.String,java.util.Set)" class="member-name-link">setStringSet</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set String value to shared preferences.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setStringSet(android.content.Context,java.lang.String,java.util.Set)" class="member-name-link">setStringSet</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Set StringSet value from shared preferences.</div>
+</div>
 </div>
 </div>
 </div>
@@ -229,6 +261,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getInt</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  int&nbsp;defValue)</span></div>
+<div class="block">Get int value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Default value if not found.</dd>
+<dt>Returns:</dt>
+<dd>Int value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -237,6 +278,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInt</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  int&nbsp;value)</span></div>
+<div class="block">Set int value to shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - Int value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -245,6 +293,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getString</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;defValue)</span></div>
+<div class="block">Get String value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Default value if not found.</dd>
+<dt>Returns:</dt>
+<dd>String value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -253,14 +310,30 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setString</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block">Set String value to shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - String value.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getFloat(android.content.Context,java.lang.String,float)">
 <h3>getFloat</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFloat</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getFloat</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  float&nbsp;defValue)</span></div>
+<div class="block">Get Float value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Float value.</dd>
+<dt>Returns:</dt>
+<dd>Float value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -269,6 +342,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFloat</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  float&nbsp;value)</span></div>
+<div class="block">Set Float value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - Float value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -277,6 +357,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getBoolean</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  boolean&nbsp;defValue)</span></div>
+<div class="block">Get Boolean value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Default value if not found.</dd>
+<dt>Returns:</dt>
+<dd>Boolean value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -285,6 +374,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setBoolean</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  boolean&nbsp;value)</span></div>
+<div class="block">Set Boolean value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - Boolean value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -293,6 +389,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name">getLong</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  long&nbsp;defValue)</span></div>
+<div class="block">Get Long value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Long value.</dd>
+<dt>Returns:</dt>
+<dd>Long value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -301,6 +406,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLong</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  long&nbsp;value)</span></div>
+<div class="block">Set Long value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - Long value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -309,6 +421,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a></span>&nbsp;<span class="element-name">getDate</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;defValue)</span></div>
+<div class="block">Get Date value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defValue</code> - Date value.</dd>
+<dt>Returns:</dt>
+<dd>Date value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -317,6 +438,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDate</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Date.html" title="class or interface in java.util" class="external-link">Date</a>&nbsp;value)</span></div>
+<div class="block">Set Date value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - Date value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -325,6 +453,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStringSet</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;value)</span></div>
+<div class="block">Set StringSet value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>value</code> - StringSet value.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -333,6 +468,15 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getStringSet</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html" title="class or interface in java.util" class="external-link">Set</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;defaultValue)</span></div>
+<div class="block">Get StringSet value from shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+<dd><code>defaultValue</code> - StringSet value.</dd>
+<dt>Returns:</dt>
+<dd>StringSet value from shared preferences.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -340,24 +484,36 @@ loadScripts(document, 'script');</script>
 <h3>remove</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">remove</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block">Used to remove preference key/value.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dd><code>key</code> - Key for value.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clear(android.content.Context)">
 <h3>clear</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span><wbr><span class="parameters">(android.content.Context&nbsp;context)</span></div>
+<div class="block">Used to clear key/values in shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getAll(android.content.Context)">
 <h3>getAll</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr>?&gt;</span>&nbsp;<span class="element-name">getAll</span><wbr><span class="parameters">(android.content.Context&nbsp;context)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="migrate(android.content.Context)">
-<h3>migrate</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">migrate</span><wbr><span class="parameters">(android.content.Context&nbsp;context)</span></div>
+<div class="block">Get all the key/vales in shared preferences.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - Current application context.</dd>
+<dt>Returns:</dt>
+<dd>key/vales in shared preferences.</dd>
+</dl>
 </section>
 </li>
 </ul>
