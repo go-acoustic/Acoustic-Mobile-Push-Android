@@ -109,17 +109,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CACHE_DIR_PREFIX" class="member-name-link">CACHE_DIR_PREFIX</a></code></div>
+<div class="col-second even-row-color"><code><a href="#LOG_TAG" class="member-name-link">LOG_TAG</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#LOG_TAG" class="member-name-link">LOG_TAG</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#LOGGING_FOLDER" class="member-name-link">LOGGING_FOLDER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color"><code><a href="#LOGGING_FOLDER" class="member-name-link">LOGGING_FOLDER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#TAG" class="member-name-link">TAG</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#TAG" class="member-name-link">TAG</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -222,9 +219,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#initLogPersistence(android.content.Context,co.acoustic.mobile.push.sdk.api.MceSdkConfiguration)" class="member-name-link">initLogPersistence</a><wbr>(android.content.Context&nbsp;context,
  <a href="../api/MceSdkConfiguration.html" title="class in co.acoustic.mobile.push.sdk.api">MceSdkConfiguration</a>&nbsp;mceSdkConfiguration)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Used to log actions in sdk.</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#jobLog(java.lang.String,int,java.lang.String,java.lang.Object)" class="member-name-link">jobLog</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jobId,
  int&nbsp;osJobId,
@@ -299,20 +294,6 @@ loadScripts(document, 'script');</script>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="CACHE_DIR_PREFIX">
-<h3>CACHE_DIR_PREFIX</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">CACHE_DIR_PREFIX</span></div>
-<dl class="notes">
-<dt>See Also:</dt>
-<dd>
-<ul class="see-list">
-<li><a href="../../../../../../constant-values.html#co.acoustic.mobile.push.sdk.util.Logger.CACHE_DIR_PREFIX">Constant Field Values</a></li>
-</ul>
-</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="LOGGING_FOLDER">
 <h3>LOGGING_FOLDER</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">LOGGING_FOLDER</span></div>
@@ -380,15 +361,9 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">initLogPersistence</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
  <a href="../api/MceSdkConfiguration.html" title="class in co.acoustic.mobile.push.sdk.api">MceSdkConfiguration</a>&nbsp;mceSdkConfiguration)</span>
                                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
-<div class="block">Used to log actions in sdk.</div>
 <dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>context</code> - Current application context.</dd>
-<dd><code>mceSdkConfiguration</code> - MceSdkConfiguration object.</dd>
-<dt>Returns:</dt>
-<dd>Whether it was able to log.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - There could be an IOException.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
 </dl>
 </section>
 </li>
