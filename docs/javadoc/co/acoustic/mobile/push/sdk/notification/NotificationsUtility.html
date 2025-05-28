@@ -157,10 +157,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#checkOsNotificationsStatus(android.content.Context)" class="member-name-link">checkOsNotificationsStatus</a><wbr>(android.content.Context&nbsp;context)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.PendingIntent</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createActionPendingIntent(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.Action,co.acoustic.mobile.push.sdk.api.notification.MceNotificationPayload,int,java.lang.Class,java.lang.String,boolean)" class="member-name-link">createActionPendingIntent</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#applyIconColorToBuilder(android.content.Context,java.lang.Object)" class="member-name-link">applyIconColorToBuilder</a><wbr>(android.content.Context&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Applies the globally configured icon color to the provided notification builder.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#checkOsNotificationsStatus(android.content.Context)" class="member-name-link">checkOsNotificationsStatus</a><wbr>(android.content.Context&nbsp;context)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.PendingIntent</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createActionPendingIntent(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.Action,co.acoustic.mobile.push.sdk.api.notification.MceNotificationPayload,int,java.lang.Class,java.lang.String,boolean)" class="member-name-link">createActionPendingIntent</a><wbr>(android.content.Context&nbsp;context,
  android.os.Bundle&nbsp;extras,
  <a href="../api/notification/Action.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">Action</a>&nbsp;action,
  <a href="../api/notification/MceNotificationPayload.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">MceNotificationPayload</a>&nbsp;mceNotificationPayload,
@@ -168,20 +174,29 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;cls,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;notifUUID,
  boolean&nbsp;cancelOnClick)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.Notification.Builder</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int)" class="member-name-link">createBuilder</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.Notification.Builder</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int)" class="member-name-link">createBuilder</a><wbr>(android.content.Context&nbsp;context,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
  int&nbsp;icon)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create notification builder.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static androidx.core.app.NotificationCompat.Builder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCompatBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails)" class="member-name-link">createCompatBuilder</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static androidx.core.app.NotificationCompat.Builder</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCompatBuilder(android.content.Context,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails)" class="member-name-link">createCompatBuilder</a><wbr>(android.content.Context&nbsp;context,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.Notification</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createNotification(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int,int,java.lang.Class,java.util.UUID)" class="member-name-link">createNotification</a><wbr>(android.content.Context&nbsp;context,
+ android.os.Bundle&nbsp;extras,
+ <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
+ int&nbsp;icon,
+ int&nbsp;actionFlags,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;cls,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;notifUUID)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.Notification</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createNotification(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int,int,java.lang.Class,java.util.UUID)" class="member-name-link">createNotification</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createNotificationCompat(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int,int,java.lang.Class,java.util.UUID)" class="member-name-link">createNotificationCompat</a><wbr>(android.content.Context&nbsp;context,
  android.os.Bundle&nbsp;extras,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
  int&nbsp;icon,
@@ -189,31 +204,22 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;cls,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;notifUUID)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static android.app.Notification</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createNotificationCompat(android.content.Context,android.os.Bundle,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,int,int,java.lang.Class,java.util.UUID)" class="member-name-link">createNotificationCompat</a><wbr>(android.content.Context&nbsp;context,
- android.os.Bundle&nbsp;extras,
- <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
- int&nbsp;icon,
- int&nbsp;actionFlags,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;&nbsp;cls,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;notifUUID)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#postCreate(android.content.Context,android.app.NotificationManager,android.app.Notification,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,java.lang.String)" class="member-name-link">postCreate</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#postCreate(android.content.Context,android.app.NotificationManager,android.app.Notification,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,java.lang.String)" class="member-name-link">postCreate</a><wbr>(android.content.Context&nbsp;context,
  android.app.NotificationManager&nbsp;notificationManager,
  android.app.Notification&nbsp;notification,
  <a href="../api/notification/NotificationDetails.html" title="interface in co.acoustic.mobile.push.sdk.api.notification">NotificationDetails</a>&nbsp;notificationDetails,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;notifUUID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setCustomLayout(android.content.Context,java.lang.String,int,int,int,int%5B%5D,boolean%5B%5D)" class="member-name-link">setCustomLayout</a><wbr>(android.content.Context&nbsp;context,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#setCustomLayout(android.content.Context,java.lang.String,int,int,int,int%5B%5D,boolean%5B%5D)" class="member-name-link">setCustomLayout</a><wbr>(android.content.Context&nbsp;context,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;layoutName,
  int&nbsp;layoutId,
  int&nbsp;textViewId,
  int&nbsp;imageViewId,
  int[]&nbsp;actionViewIds,
  boolean[]&nbsp;actionViewSupportText)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -351,6 +357,20 @@ loadScripts(document, 'script');</script>
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="applyIconColorToBuilder(android.content.Context,java.lang.Object)">
+<h3>applyIconColorToBuilder</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">applyIconColorToBuilder</span><wbr><span class="parameters">(android.content.Context&nbsp;context,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;builder)</span></div>
+<div class="block">Applies the globally configured icon color to the provided notification builder.
+ Retrieves the color from NotificationsPreference.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>context</code> - The application context.</dd>
+<dd><code>builder</code> - The Notification.Builder or NotificationCompat.Builder instance.</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="postCreate(android.content.Context,android.app.NotificationManager,android.app.Notification,co.acoustic.mobile.push.sdk.api.notification.NotificationDetails,java.lang.String)">
 <h3>postCreate</h3>
