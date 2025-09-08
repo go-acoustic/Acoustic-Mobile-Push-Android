@@ -8,6 +8,9 @@
 
   "Use 'fcm' for FCM or 'custom' for custom messaging service": "",
   "messagingService": "fcm",
+  
+  "Enables or disables encrypted SharedPreferences. Note: certain devices require plain.  Default is false.": "",
+  "usePreferencesEncryption": false,
 
   "Will invalidate the existing user/channel ID if they exist when set to true": "This is for testing only. Do not ship with this set to true unless you understand what you are doing",
   "invalidateExistingUser": false,
